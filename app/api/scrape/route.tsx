@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { load } from 'cheerio'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 import { SocksProxyAgent } from 'socks-proxy-agent'
 import { z } from 'zod'
 
@@ -11,7 +11,7 @@ const requestFormat = z.object({
 
 export const dynamic = 'force-dynamic'
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   // Check Authorization header against API Key
   const authHeader = req.headers.get('Authorization')
   if (authHeader !== 'Bearer ' + process.env.API_KEY) {
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     const proxyAgent = new SocksProxyAgent(
       `socks5://${process.env.PROXY_USERNAME!}:${process.env
-        .PROXY_PASSWORD!}@${process.env.PROXY_HOST!}:${process.env.PROXY_PORT!}`
+        .PROXY_PASSWORD!}@${process.env.PROXY_HOST!}:${process.env.PROXY_PORT!}`,
     )
     try {
       const axiosResponse = await axios.get(body.url, {

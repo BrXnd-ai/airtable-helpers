@@ -12,6 +12,7 @@
     "axios": "^1.7.2",
     "cheerio": "^1.0.0-rc.12",
     "next": "14.2.4",
+    "prettier": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "socks-proxy-agent": "^8.0.3",
@@ -23,8 +24,16 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-no-floating-promise": "^2.0.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^3.2.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^7.13.0"
   }
 }
