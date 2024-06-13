@@ -1,5 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Airtable Helpers
+
+Airtable Helpers is a NextJS app that can easily be run on Vercel or elsewhere and provides some helpful utilities to call from Airtable automations.
 
 ## Getting Started
 
