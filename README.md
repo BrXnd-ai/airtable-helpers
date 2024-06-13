@@ -26,7 +26,7 @@ airtable. I like
 [the instructions here](https://kirillplatonov.com/posts/setting-up-cloudflare-tunnel-for-development/).
 
 You'll need to be a Cloudflare user with a domain pointing there (it's free to
-use their DNS servies).
+use their DNS servies). **If you want to use another tunnel service, go for it. This doesn't matter except for testing.**
 
 ### Setup the CLI
 
