@@ -5,6 +5,12 @@ and provides some helpful utilities to call from Airtable automations.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBrXnd-ai%2Fairtable-helpers&env=APP_NAME,API_KEY,PROXY_PORT,PROXY_USERNAME,PROXY_PASSWORD,PROXY_HOST&envDescription=API%20keys%20needed%20for%20the%20application%2C%20proxy%20keys%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2FBrXnd-ai%2Fairtable-helpers%2Fblob%2Fmain%2Fexample.env&project-name=airtable-helpers&repository-name=airtable-helpers)
 
+## Endpoints
+
+- `/api/scrape`: {url: string, proxy?: boolean} takes URL + optional proxy flag
+  and scrapes the page.
+- `/api/xml`: {url: string} takes XML URL and returns JSON.
+
 ## Getting Started
 
 First, run the development server:
