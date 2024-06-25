@@ -1,6 +1,9 @@
 # Airtable Helpers
 
-Airtable Helpers is a NextJS app that can easily be run on Vercel or elsewhere and provides some helpful utilities to call from Airtable automations.
+Airtable Helpers is a NextJS app that can easily be run on Vercel or elsewhere
+and provides some helpful utilities to call from Airtable automations.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBrXnd-ai%2Fairtable-helpers&env=APP_NAME,API_KEY,PROXY_PORT,PROXY_USERNAME,PROXY_PASSWORD,PROXY_HOST&envDescription=API%20keys%20needed%20for%20the%20application%2C%20proxy%20keys%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2FBrXnd-ai%2Fairtable-helpers%2Fblob%2Fmain%2Fexample.env&project-name=airtable-helpers&repository-name=airtable-helpers)
 
 ## Getting Started
 
@@ -26,7 +29,8 @@ airtable. I like
 [the instructions here](https://kirillplatonov.com/posts/setting-up-cloudflare-tunnel-for-development/).
 
 You'll need to be a Cloudflare user with a domain pointing there (it's free to
-use their DNS servies). **If you want to use another tunnel service, go for it. This doesn't matter except for testing.**
+use their DNS servies). **If you want to use another tunnel service, go for it.
+This doesn't matter except for testing.**
 
 ### Setup the CLI
 
