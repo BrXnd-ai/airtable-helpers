@@ -4,6 +4,8 @@ import { NextRequest } from 'next/server'
 import { SocksProxyAgent } from 'socks-proxy-agent'
 import { z } from 'zod'
 
+import { processRequest } from '@/utils/auth'
+
 const requestFormat = z.object({
   url: z.string(),
   proxy: z.boolean().optional(),
@@ -12,12 +14,8 @@ const requestFormat = z.object({
 export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
-  // Check Authorization header against API Key
-  const authHeader = req.headers.get('Authorization')
-  if (authHeader !== 'Bearer ' + process.env.API_KEY) {
-    return new Response('Unauthorized', { status: 401 })
-  }
-  let body
+  let body = await processRequest(req, requestFormat)
+
   // Check request body against Zod schema
   try {
     body = await req.json()
