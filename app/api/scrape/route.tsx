@@ -14,16 +14,10 @@ const requestFormat = z.object({
 export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
-  let body = await processRequest(req, requestFormat)
-
-  // Check request body against Zod schema
-  try {
-    body = await req.json()
-
-    requestFormat.parse(body)
-  } catch (error) {
-    return new Response('Bad Request', { status: 400 })
-  }
+  console.log('/api/scrape')
+  const body = (await processRequest(req, requestFormat)) as z.infer<
+    typeof requestFormat
+  >
   let data
   // Scrape the URL
   if (body.proxy) {
